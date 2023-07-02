@@ -1,0 +1,27 @@
+### get user 
+
+GET http://localhost:3001/users/12
+Content-Type: application/json
+
+### create user
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "omid"
+}
+
+### update user
+
+PATCH http://localhost:3001/users/13
+Content-Type: application/json
+
+{
+    "name": "omid"
+}
+
+
+
+
+

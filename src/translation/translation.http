@@ -1,0 +1,33 @@
+### post translation (insert)
+POST http://localhost:3001/translation
+Content-Type:application/json
+
+{
+    "phrase":"kebab",
+    "translation":"کباب",
+    "fromLang":"en",
+    "toLang":"fa"
+}
+
+### put translation (update)
+
+PUT http://localhost:3001/translation
+Content-Type:application/json
+
+{
+    "phrase":"kebab",
+    "translation":"کباب",
+    "fromLang":"en",
+    "toLang":"fa"
+}
+
+### delet translation (delet)
+
+DELETE http://localhost:3001/translation
+Content-Type:application/json
+
+{
+    "id":"12525",
+    "phrase":"kebab",
+    "translation":"کباب"
+}
