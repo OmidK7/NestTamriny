@@ -1,22 +1,24 @@
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 import { EventEntity } from 'src/event/entities/event.entity';
 import { TranslationEntity } from 'src/translation/entities/translation.entity';
-import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, OneToMany } from 'typeorm';
 
 @Entity('user')
 export class UsersEntity {
   @IsString()
-  @PrimaryGeneratedColumn()
-  id: number;
+  @Column({ nullable: true })
+  name?: string;
 
   @IsString()
   @Column()
-  name: string;
+  password: string;
 
-  @JoinTable()
-  @ManyToMany(() => TranslationEntity,(translation) =>translation.users)
-    translations: TranslationEntity[];
+  @IsString()
+  @Column({ nullable: true })
+  age?: number;
 
-    @OneToMany(() => EventEntity,(event)=>event.user)
-    events: EventEntity[]
+  @IsString()
+  @Column()
+  Phone_number: string;
+
 }

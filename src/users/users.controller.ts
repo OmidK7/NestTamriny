@@ -3,7 +3,7 @@ import { Patch , Body, Controller, Get , Headers, Post , Param, Put } from '@nes
 @Controller('users')
 export class UsersController {
     @Post()
-    creatUser( @Body() body){
+    async creatUser( @Body() body){
         return body
     }
     @Get(':id')

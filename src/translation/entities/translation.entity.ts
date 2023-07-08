@@ -30,8 +30,6 @@ export class TranslationEntity {
   @CreateDateColumn()
   createdAt: Date;
 
-  @ManyToMany(() => UsersEntity, (user) => user.translations)
-  users: UsersEntity[];
 
 }
 

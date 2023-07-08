@@ -22,6 +22,4 @@ export class EventEntity{
     @IsOptional()
     createdAt?: Date
 
-    @ManyToOne(()=>UsersEntity,(user)=>user.events)
-    user: UsersEntity
 }
